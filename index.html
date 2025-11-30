@@ -13,131 +13,163 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(45deg, #ff6b6b, #ffa726);
+            background: white;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 10px;
+            margin: 0 auto;
         }
 
         .container {
             background: white;
-            border-radius: 25px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            padding: 50px 40px;
-            max-width: 480px;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
+            width: 210mm;
+            height: 297mm;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 35px;
         }
 
-        .fruit-decoration {
-            position: absolute;
-            opacity: 0.1;
-        }
-
-        .fruit-1 {
-            top: -30px;
-            right: -30px;
-            font-size: 120px;
-        }
-
-        .fruit-2 {
-            bottom: -40px;
-            left: -30px;
-            font-size: 150px;
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
         }
 
         .store-name {
             color: #2d3436;
-            font-size: 32px;
+            font-size: 52px;
             font-weight: 700;
-            margin-bottom: 5px;
-            text-align: center;
+            margin-bottom: 8px;
         }
 
         .store-address {
             color: #636e72;
-            font-size: 18px;
-            margin-bottom: 40px;
-            text-align: center;
+            font-size: 28px;
             font-weight: 500;
         }
 
         .schedule-section {
             background: linear-gradient(135deg, #74b9ff, #0984e3);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 35px;
+            border-radius: 35px;
+            padding: 60px 50px;
             color: white;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(116, 185, 255, 0.4);
+            width: 100%;
+            max-width: 580px;
+            position: relative;
         }
 
-        .schedule-title {
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: 600;
+        .schedule-fruit {
+            position: absolute;
+            opacity: 0.2;
+            font-size: 160px;
         }
 
-        .hours {
-            font-size: 42px;
-            font-weight: 800;
-            margin: 15px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        .fruit-1 {
+            top: -30px;
+            left: -25px;
         }
 
-        .daily {
-            font-size: 20px;
-            font-weight: 600;
-            opacity: 0.9;
+        .fruit-2 {
+            bottom: -40px;
+            right: -35px;
         }
 
         .feedback-section {
             background: #fff9e6;
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 25px;
-            border: 2px dashed #fdcb6e;
+            border-radius: 35px;
+            padding: 50px 45px;
+            border: 3px dashed #fdcb6e;
             text-align: center;
+            width: 100%;
+            max-width: 580px;
+            position: relative;
+        }
+
+        .feedback-fruit {
+            position: absolute;
+            opacity: 0.2;
+            font-size: 140px;
+        }
+
+        .fruit-3 {
+            top: -25px;
+            right: -30px;
+        }
+
+        .fruit-4 {
+            bottom: -35px;
+            left: -25px;
+        }
+
+        .schedule-title {
+            font-size: 32px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hours {
+            font-size: 58px;
+            font-weight: 800;
+            margin: 25px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+            white-space: nowrap;
+        }
+
+        .daily {
+            font-size: 32px;
+            font-weight: 600;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
         }
 
         .feedback-text {
             color: #e17055;
-            font-size: 16px;
+            font-size: 24px;
             line-height: 1.6;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             font-weight: 500;
+            position: relative;
+            z-index: 1;
         }
 
         .qr-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 20px 0;
+            margin: 25px 0;
+            position: relative;
+            z-index: 1;
         }
 
         .qr-code {
-            width: 180px;
-            height: 180px;
-            border: 4px solid #00b894;
-            border-radius: 15px;
-            padding: 12px;
+            width: 240px;
+            height: 240px;
+            border: 6px solid #00b894;
+            border-radius: 20px;
+            padding: 15px;
             background: white;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
         .qr-code img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 8px;
+            border-radius: 10px;
         }
 
         .signature {
             color: #636e72;
-            font-size: 16px;
+            font-size: 22px;
             text-align: center;
             font-weight: 500;
             margin-top: 10px;
@@ -148,45 +180,41 @@
             font-weight: 600;
         }
 
-        @media (max-width: 480px) {
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
             .container {
-                padding: 40px 25px;
-            }
-            
-            .hours {
-                font-size: 36px;
-            }
-            
-            .store-name {
-                font-size: 28px;
-            }
-            
-            .qr-code {
-                width: 160px;
-                height: 160px;
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+                padding: 30px 25px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Декоративные элементы -->
-        <div class="fruit-decoration fruit-1">🍎</div>
-        <div class="fruit-decoration fruit-2">🍊</div>
+        <!-- Заголовок -->
+        <div class="header">
+            <div class="store-name">Продуктовый магазин</div>
+            <div class="store-address">проезд Котовского</div>
+        </div>
         
-        <!-- Название и адрес -->
-        <div class="store-name">Продуктовый магазин</div>
-        <div class="store-address">проезд Котовского</div>
-        
-        <!-- График работы -->
+        <!-- График работы с фруктами ВНУТРИ блока -->
         <div class="schedule-section">
+            <div class="schedule-fruit fruit-1">🍎</div>
+            <div class="schedule-fruit fruit-2">🍊</div>
             <div class="schedule-title">График работы</div>
             <div class="hours">8:00 - 23:00</div>
             <div class="daily">Ежедневно</div>
         </div>
         
-        <!-- Блок обратной связи -->
+        <!-- Обратная связь с фруктами ВНУТРИ блока -->
         <div class="feedback-section">
+            <div class="feedback-fruit fruit-3">🥑</div>
+            <div class="feedback-fruit fruit-4">🍅</div>
             <div class="feedback-text">
                 Ваше мнение — самый важный для нас ориентир. 
                 Сканируйте QR-код и подскажите, как мы можем стать удобнее именно для Вас.
@@ -194,12 +222,12 @@
             
             <div class="qr-container">
                 <div class="qr-code">
-                    <!-- Замените src на ваш файл с QR-кодом -->
                     <img src="qr-code8.png" alt="QR-код для опроса">
                 </div>
             </div>
         </div>
         
+        <!-- Подпись -->
         <div class="signature">Спасибо, что Вы с <span class="highlight">нами!</span></div>
     </div>
 </body>
